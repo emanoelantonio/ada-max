@@ -32,5 +32,6 @@ Você pode reportar algum problema na seção <a href="https://github.com/emanoe
 
 ## 🧠 Autores :
  <img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/60781248?s=460&u=43dbba3483d275c3d8964df24a8f5139f53dc282&v=4" width="50px;" alt="imagem de perfil do autor"/></br><sub>Emanoel Antonio</sub></br>
-  ![Twitter Follow](https://img.shields.io/twitter/follow/DevEmanoel?style=social)</br>
+<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/117774887?v=4" width="50px;" alt="imagem de perfil do autor"/></br><sub>Ana Emanuela</sub></br>
+  </br>
  <a href="https://www.linkedin.com/in/emanoel-antonio/"><img align="center" src="https://img.shields.io/static/v1?label=&message=Linkedin&color=3D008A&style=for-the-badge&logo=linkedin"/></a>

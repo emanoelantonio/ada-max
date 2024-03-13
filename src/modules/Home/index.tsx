@@ -32,7 +32,7 @@ export const Home = () => {
         </S.Menu>
         <span>
           <S.Avatar>
-            <S.AvatarImg src='/images/elite.webp'/>
+            <S.AvatarImg src='/images/ellie.webp'/>
           </S.Avatar>
         </span>
       </S.Header>

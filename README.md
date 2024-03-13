@@ -63,12 +63,8 @@ Você pode reportar algum problema na seção <a href="https://github.com/emanoe
 
 ## 🧠 Autores :
  <img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/60781248?s=460&u=43dbba3483d275c3d8964df24a8f5139f53dc282&v=4" width="50px;" alt="imagem de perfil do autor"/></br><sub>Emanoel Antonio</sub></br>
-  ![Twitter Follow](https://img.shields.io/twitter/follow/DevEmanoel?style=social)</br>
+<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/117774887?v=4" width="50px;" alt="imagem de perfil do autor"/></br><sub>Ana Emanuela</sub></br>
+  </br>
  <a href="https://www.linkedin.com/in/emanoel-antonio/"><img align="center" src="https://img.shields.io/static/v1?label=&message=Linkedin&color=3D008A&style=for-the-badge&logo=linkedin"/></a>
-
- <!-- ## 🧠 Autores :
-
-| [<img src="https://avatars2.githubusercontent.com/u/60781248?s=460&u=43dbba3483d275c3d8964df24a8f5139f53dc282&v=4" width="50px;"/><br /><sub>Emanoel Antonio</sub>](https://www.linkedin.com/in/emanoel-antonio/) | [<img src="https://avatars.githubusercontent.com/u/12345678?s=400&u=1234567890abcdef1234567890abcdef12345678&v=4" width="50px;"/><br /><sub>Nome do autor</sub>](https://www.linkedin.com/in/link-do-autor/) |
-| :---: | :---: |
-| [![Twitter Follow](https://img.shields.io/twitter/follow/DevEmanoel?style=social)](https://twitter.com/DevEmanoel) | [![Twitter Follow](https://img.shields.io/twitter/follow/nome-do-autor?style=social)](https://twitter.com/nome-do-autor) | -->
-
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/117774887?v=4" width="50px;" alt="imagem de perfil do autor"/></br><sub>Ana Emanuela</sub></br>
+  </br>

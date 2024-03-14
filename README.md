@@ -16,13 +16,44 @@ Este projeto é uma plataforma de Streaming de vídeo onde os usuários podem as
 
 ## Requisitos e Funcionalidades
 
-- Comunicação com a API;
-- Salvar o token no LocalStorage;
-- Redirecionar para HOME;
-- Pegar os dados do usuário (para decodificar o token);
-- Proteger as páginas;
-- Fazer Logout;
-- Mostrar alerta de credênciais inválidas;
+### Login
+
+- [ x ] Tela de login com `email` e `password`;
+- [ x ] Fazer validação dos campos;
+- [ x ] Fazer chamada POST `/api/signIn`;
+- [ x ] Quando BackEnd retornar 401: Mostrar mensagem de erro ex:`Credencias inválidas`
+- [ x ] Quando BackEnd retornar 200: Redirecionar para tela conforme o role do usuário;
+      Se for `user` para tela `Profile` se `admin` para Backstage;
+
+### Logout
+
+- [ x ] Criar algum ponto no sistema para fazer logout, limpando o token e redirecionando para o login;
+
+### Profile
+
+- [ x ] Listar os profiles;
+- [ x ] Criar um novo profile;
+- [ x ] Alterar um profile;
+- [ x ] Remover um profile;
+- [ x ] Apos selecionado um profile, redirecionar para `/home`
+
+### Home
+
+- [ x ] Mostrar os banners. Pegando de GET `/api/banners`;
+- [ x ] (plus) Criar um carousel com os banners;
+- [ x ] Mostrar os trilhos de ofertas. Pegando em GET `/api/trail-offers`;
+- [ x ] No momento que o elmento da oferta entrar no viewport, chamamos o GET `/api/trail-offer/:id` então mostramos data um dos thumbs das ofertas
+
+### Funcionalidades gerais
+
+- [ x ] Use Internacionalização para os textos;
+- [ x ] Use os hooks, especialmente criando custom hooks;
+- [ x ] Componentize os elementos para que fiquem reaproveitáveis;
+- [ x ] Use Context API;
+- [ x ] Valide sempre os formulários para que o mesmo não seja submetido sem os dados estarem ok;
+- [ x ] Coloque `Loading` onde precisa;
+- [ x ] Trate erros inesperados usando Error Boundaries; (para não dar a famosa tela branca)
+
 
 ## 📑 Report :
 
@@ -32,5 +63,8 @@ Você pode reportar algum problema na seção <a href="https://github.com/emanoe
 
 ## 🧠 Autores :
  <img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/60781248?s=460&u=43dbba3483d275c3d8964df24a8f5139f53dc282&v=4" width="50px;" alt="imagem de perfil do autor"/></br><sub>Emanoel Antonio</sub></br>
-  ![Twitter Follow](https://img.shields.io/twitter/follow/DevEmanoel?style=social)</br>
+<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/117774887?v=4" width="50px;" alt="imagem de perfil do autor"/></br><sub>Ana Emanuela</sub></br>
+  </br>
  <a href="https://www.linkedin.com/in/emanoel-antonio/"><img align="center" src="https://img.shields.io/static/v1?label=&message=Linkedin&color=3D008A&style=for-the-badge&logo=linkedin"/></a>
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/117774887?v=4" width="50px;" alt="imagem de perfil do autor"/></br><sub>Ana Emanuela</sub></br>
+  </br>

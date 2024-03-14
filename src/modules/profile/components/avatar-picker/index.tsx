@@ -17,6 +17,8 @@ export const AvatarPicker = ({ onSelectAvatar, onClose }: Props) => {
     return <div>Loading...</div>
   }
 
+  const path = window.location.origin
+
   return (
     <div className={styles.wrapper}>
       <div className="container">
@@ -42,7 +44,7 @@ export const AvatarPicker = ({ onSelectAvatar, onClose }: Props) => {
                         key={item.id}
                         className={styles.box__items__item}
                       >
-                        <Avatar image={item.image} size="large"/>
+                        <Avatar image={`${path}/public/images/${item.image}.webp`} size="large"/>
                       </span>
                     ))}
                   </div>

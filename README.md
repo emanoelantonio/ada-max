@@ -19,11 +19,11 @@ Este projeto é uma plataforma de Streaming de vídeo onde os usuários podem as
 ### Login
 
 - [x] Tela de login com `email` e `password`;
-- [x] Fazer validação dos campos;
-- [x] Fazer chamada POST `/api/signIn`;
+- [x] Validação dos campos;
+- [x] Chamada POST `/api/signIn`;
 - [x] Quando BackEnd retornar 401: Mostrar mensagem de erro ex:`Credencias inválidas`
 - [x] Quando BackEnd retornar 200: Redirecionar para tela conforme o role do usuário;
-      Se for `user` para tela `Profile` se `admin` para Backstage;
+  - Se for `user` para tela `Profile` se `admin` para Backstage;
 
 ### Logout
 
@@ -46,13 +46,13 @@ Este projeto é uma plataforma de Streaming de vídeo onde os usuários podem as
 
 ### Funcionalidades gerais
 
-- [x] Use Internacionalização para os textos;
-- [x] Use os hooks, especialmente criando custom hooks;
+- [x] Usar Internacionalização para os textos;
+- [x] Usar os hooks, especialmente criando custom hooks;
 - [x] Componentize os elementos para que fiquem reaproveitáveis;
-- [x] Use Context API;
-- [x] Valide sempre os formulários para que o mesmo não seja submetido sem os dados estarem ok;
-- [x] Coloque `Loading` onde precisa;
-- [x] Trate erros inesperados usando Error Boundaries; (para não dar a famosa tela branca)
+- [x] Usar Context API;
+- [x] Validar sempre os formulários para que o mesmo não seja submetido sem os dados estarem ok;
+- [x] Colocar `Loading` onde precisa;
+- [x] Tratar erros inesperados usando Error Boundaries; (para não dar a famosa tela branca)
 
 
 ## 📑 Report :

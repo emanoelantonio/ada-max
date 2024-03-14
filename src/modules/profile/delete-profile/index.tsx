@@ -6,7 +6,7 @@ import { AxiosError, isAxiosError } from "axios";
 import { Alert, Avatar, Loader } from "../../../components";
 
 import { ProfileType } from "../../../types";
-import styles from "./index.module.css";
+import { Actions, Container, Header, Paragraph } from "./styles";
 
 export const DeleteProfile = () => {
   const [profile, setProfile] = useState<ProfileType | null>(null);
@@ -65,33 +65,33 @@ export const DeleteProfile = () => {
 
   return (
     <>
-      <div className="container">
-        <div className={styles.header}>
-          <Avatar image={profile?.avatar.image} disabled />
-          <h4>{profile?.name}</h4>
-        </div>
-        <h1 className="title">Delete Profile ?</h1>
-        <p className={styles.p}>
-          This will permanently delete all settings and preferences for this
-          profile, including My List and Continue Watching.
-        </p>
+      <Container>
+      <Header>
+        <Avatar image={profile?.avatar.image} disabled />
+        <h4>{profile?.name}</h4>
+      </Header>
+      <h1 className="title">Delete Profile ?</h1>
+      <Paragraph>
+        This will permanently delete all settings and preferences for this
+        profile, including My List and Continue Watching.
+      </Paragraph>
 
-        <div className={styles.actions}>
-          <button
-            className="btn btn--full btn--white"
-            onClick={handleDelete}
-            disabled={isLoading}
-          >
-            Delete Profile
-          </button>
-          <button
-            className="btn btn--full btn--primary"
-            onClick={() => navigate("/profile")}
-          >
-            Cancel
-          </button>
-        </div>
-      </div>
+      <Actions>
+        <button
+          className="btn btn--full btn--white"
+          onClick={handleDelete}
+          disabled={isLoading}
+        >
+          Delete Profile
+        </button>
+        <button
+          className="btn btn--full btn--primary"
+          onClick={() => navigate("/profile")}
+        >
+          Cancel
+        </button>
+      </Actions>
+    </Container>
       {isLoading && <Loader />}
     </>
   );

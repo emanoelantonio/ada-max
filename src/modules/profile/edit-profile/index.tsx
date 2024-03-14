@@ -6,7 +6,7 @@ import { AvatarType } from "../../../types";
 import { AxiosError } from "axios";
 import { Alert, Avatar, Button, Input, Loader } from "../../../components";
 import { AvatarPicker } from "../components/avatar-picker";
-import styles from "./index.module.css";
+import { Actions, Container, Limiter } from "./styles";
 
 export const EditProfile = () => {
 
@@ -69,40 +69,37 @@ export const EditProfile = () => {
 
   return (
     <>
-      <div className="container">
-        <div className={styles.limiter}>
-          <div className={styles.container}>
-            <h1 className="title">Edit Profile</h1>
-            <div className="flex-center" onClick={() => setIsOpen(!isOpen)}>
-              <Avatar image={selectedAvatar?.image} isEdit/>
-            </div>
-            <div>
-              <Input
-                label="Profile Name"
-                onChange={(e) => setName(e.target.value)}
-                value={name}
-                disabled={isLoading}
-              />
-            </div>
-            <div className={styles.actions}>
-              <Button
-                fullWidth
-                onClick={handleSave}
-                disabled={isDisabled}
-              >
-                Done
-              </Button>
-              <Button
-                variant="subtle"
-                onClick={() => navigate(`/delete-profile/${id}`)}
-              >
-                Delete Profile
-              </Button>
-            </div>
-            {error && <Alert>{error}</Alert>}
+      <Container>
+      <Limiter>
+        <div>
+          <h1 className="title">Edit Profile</h1>
+          <div className="flex-center" onClick={() => setIsOpen(!isOpen)}>
+            <Avatar image={selectedAvatar?.image} isEdit />
           </div>
+          <div>
+            <Input
+              label="Profile Name"
+              onChange={(e) => setName(e.target.value)}
+              value={name}
+              disabled={isLoading}
+            />
+          </div>
+          <Actions>
+            <Button fullWidth onClick={handleSave} disabled={isDisabled}>
+              Done
+            </Button>
+            <Button
+              variant="subtle"
+              onClick={() => navigate(`/delete-profile/${id}`)}
+            >
+              Delete Profile
+            </Button>
+          </Actions>
+          {error && <Alert>{error}</Alert>}
         </div>
-      </div>
+      </Limiter>
+      </Container>
+      
       {isOpen ? (
         <AvatarPicker
           onSelectAvatar={handleSelectAvatar}

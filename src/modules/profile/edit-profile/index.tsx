@@ -86,7 +86,6 @@ export const EditProfile = () => {
             </div>
             <div className={styles.actions}>
               <Button
-                fullWidth
                 onClick={handleSave}
                 disabled={isDisabled}
               >

@@ -7,6 +7,7 @@ export const Profile = () => {
 
   const { data, isLoading } = useGetProfiles();
   const { goToPage, isEditing, toggleEditing } = useProfile();
+  const path = window.location.origin
 
   return (
     <>
@@ -20,7 +21,7 @@ export const Profile = () => {
                 key={profile.id}
                 onClick={() => goToPage(profile.id)}
               >
-                <Avatar image={profile.avatar.image} isEdit={isEditing}/>
+                <Avatar image={`${path}/public/images/${profile.avatar.image}.webp`} isEdit={isEditing}/>
                 <div className="avatar__name">{profile.name}</div>
               </button>
             ))}

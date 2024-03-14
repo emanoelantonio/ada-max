@@ -68,3 +68,7 @@ Você pode reportar algum problema na seção <a href="https://github.com/emanoe
  <a href="https://www.linkedin.com/in/emanoel-antonio/"><img align="center" src="https://img.shields.io/static/v1?label=&message=Linkedin&color=3D008A&style=for-the-badge&logo=linkedin"/></a>
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/117774887?v=4" width="50px;" alt="imagem de perfil do autor"/></br><sub>Ana Emanuela</sub></br>
   </br>
+  </br>
+ <a href="https://www.linkedin.com/in/gustavoschmitt13/"><img align="center" src="https://img.shields.io/static/v1?label=&message=Linkedin&color=3D008A&style=for-the-badge&logo=linkedin"/></a>
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/86036030?s=400&u=264352b8ae079e44f1b120e6cf05d34a60775b7f&v=4" width="50px;" alt="imagem de perfil do autor"/></br><sub>Gustavo Schmitt</sub></br>
+  </br>

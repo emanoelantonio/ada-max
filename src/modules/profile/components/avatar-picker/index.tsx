@@ -17,6 +17,8 @@ export const AvatarPicker = ({ onSelectAvatar, onClose }: Props) => {
     return <div>Loading...</div>
   }
 
+  const path = window.location.origin
+
   return (
     <Wrapper>
       <Container>
@@ -29,17 +31,17 @@ export const AvatarPicker = ({ onSelectAvatar, onClose }: Props) => {
         <div>
           <Box>
             <BoxItems>
-              {data?.map((avatar) => {
+              {data?.map((avatar:any) => {
                 return (
                   <Box key={avatar.name}>
                     <h4 id={avatar.name}>{avatar.name}</h4>
                     <>
-                      {avatar.items.map((item) => (
+                      {avatar.items.map((item:any) => (
                         <BoxItemsItem
                           onClick={() => onSelectAvatar(item)}
                           key={item.id}
                         >
-                          <Avatar image={item.image} size="large"/>
+                          <Avatar image={`${path}/${item.image}.webp`} size="large"/>
                         </BoxItemsItem>
                       ))}
                     </>

@@ -3,7 +3,7 @@ import { AvatarType } from "../../../../types";
 import clsx from "clsx";
 import { Avatar } from "../../../../components/";
 import { useGetAvatars } from "../../hooks/use-get-avatars";
-import styles from "./index.module.css";
+import { Box, BoxItems, BoxItemsItem, CloseButton, Container, Section, Wrapper } from "./styles";
 
 type Props = {
   onSelectAvatar: (avatar: AvatarType) => void;
@@ -18,40 +18,38 @@ export const AvatarPicker = ({ onSelectAvatar, onClose }: Props) => {
   }
 
   return (
-    <div className={styles.wrapper}>
-      <div className="container">
-        <button
-          className={clsx("btn btn--primary", styles.close)}
-          onClick={onClose}
-        >
+    <Wrapper>
+      <Container>
+        <CloseButton className={clsx("btn btn--primary")} onClick={onClose}>
           Back
-        </button>
-        <div className="section">
+        </CloseButton>
+        <Section>
           <h1 className="title">Choose an Avatar</h1>
+        </Section>
+        <div>
+          <Box>
+            <BoxItems>
+              {data?.map((avatar) => {
+                return (
+                  <Box key={avatar.name}>
+                    <h4 id={avatar.name}>{avatar.name}</h4>
+                    <>
+                      {avatar.items.map((item) => (
+                        <BoxItemsItem
+                          onClick={() => onSelectAvatar(item)}
+                          key={item.id}
+                        >
+                          <Avatar image={item.image} size="large"/>
+                        </BoxItemsItem>
+                      ))}
+                    </>
+                  </Box>
+                );
+              })}
+            </BoxItems>
+          </Box>
         </div>
-        <div className={styles.container}>
-          <div className={styles.scroll}>
-            {data?.map((avatar) => {
-              return (
-                <div className={styles.box} key={avatar.name}>
-                  <h4 id={avatar.name}>{avatar.name}</h4>
-                  <div className={styles.box__items}>
-                    {avatar.items.map((item) => (
-                      <span
-                        onClick={() => onSelectAvatar(item)}
-                        key={item.id}
-                        className={styles.box__items__item}
-                      >
-                        <Avatar image={item.image} size="large"/>
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    </div>
+      </Container>
+    </Wrapper>
   );
 };

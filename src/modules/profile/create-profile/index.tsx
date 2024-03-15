@@ -1,7 +1,7 @@
 import { Alert, Avatar, Button, Input, Loader } from "../../../components";
 import { AvatarPicker } from "../components/avatar-picker";
 import { useCreateProfile } from "./hooks/use-create-profile";
-import styles from "./index.module.css";
+import { Actions, Container, Limiter } from "./styles";
 
 export const CreateProfile = () => {
   const {
@@ -17,16 +17,16 @@ export const CreateProfile = () => {
     open,
     close,
     isOpen,
-   } = useCreateProfile();
+  } = useCreateProfile();
 
   return (
     <>
-      <div className="container">
-        <div className={styles.limiter}>
-          <div className={styles.container}>
+      <Container>
+        <Limiter>
+          <div>
             <h1 className="title">Create Profile</h1>
             <div className="flex-center" onClick={open}>
-              <Avatar image={ avatar?.image} isEdit />
+              <Avatar image={avatar?.image} isEdit />
             </div>
             <form onSubmit={handleSubmit}>
               <div>
@@ -42,7 +42,7 @@ export const CreateProfile = () => {
                   {...register("name")}
                 />
               </div>
-              <div className={styles.actions}>
+              <Actions>
                 <Button
                   type="submit"
                   fullWidth
@@ -51,21 +51,17 @@ export const CreateProfile = () => {
                 >
                   Save
                 </Button>
-                <Button
-                  variant="filled"
-                  type="button"
-                  onClick={handleClose}
-                >
+                <Button variant="filled" type="button" onClick={handleClose}>
                   Cancel
                 </Button>
-              </div>
+              </Actions>
             </form>
             {isError && <Alert>Deu errado!</Alert>}
           </div>
-        </div>
-      </div>
+        </Limiter>
+      </Container>
       {isOpen ? (
-        <AvatarPicker onSelectAvatar={selectAvatar} onClose={close}/>
+        <AvatarPicker onSelectAvatar={selectAvatar} onClose={close} />
       ) : null}
 
       {isPending && <Loader />}
